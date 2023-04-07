@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Music Player</h1>
+
+    <div class="gridBox">
+      <div class="col1">
+        <div>
+          <div class="mainAudioContainer">
+            <div class="audioInfoContainer">
+              <video id="my-video" width="320" height="240" loop>
+                <source src="play video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="audoNameBox">
+            <p id="audioName"></p>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+            <p id="audioTime">0:00</p>
+          </div>
+
+          <div class="music-controls">
+            <button class="prev-btn"><i class="fas fa-forward"></i></button>
+            <button id="skipForwardBtn" title="Skip Forward"><i class="fa-solid fa-forward-fast"></i></button>
+
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+            <button class="pause-btn"><i class="fas fa-pause"></i></button>
+
+            <button class="stop-btn"><i class="fas fa-stop"></i></button>
+            <button id="skipBackwardBtn" title="Skip Backward"><i class="fa-solid fa-backward-fast"></i></button>
+            <button class="next-btn"><i class="fas fa-forward"></i></button>
+            <button class="vol-down-btn"><i class="fas fa-volume-down"></i></button>
+            <input type="range" class="vol-slider" min="0" max="1" step="0.01" value="1">
+            <button class="vol-up-btn"><i class="fas fa-volume-up"></i></button>
+          </div>
+
+          <div class="upload-container">
+            <label for="upload-btn"><i class="fas fa-cloud-upload-alt"></i> Upload Song</label>
+            <input type="file" id="upload-btn" multiple>
+          </div>
+
+
+
+          <audio id="audio"></audio>
+        </div>
+      </div>
+      <div class="col2">
+        <h2>All Songs</h2>
+        <ul id="myList" class="song-list">
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

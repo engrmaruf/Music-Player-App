@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gridBox {
+    display: grid;
+    grid-template-columns: auto 400px;
+    grid-gap: 10px;
+}
+
+.col1 {
+    width: 100%;
+}
+
+.col2 {
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.100);
+    padding: 20px;
+}
+
+.col2 ul li {
+    margin: 6px;
+    list-style: decimal;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.070);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.music-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.music-controls button,
+.music-controls input {
+    margin: 0 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: #666;
+}
+
+.music-controls button:hover,
+.music-controls input:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+.music-controls input[type="range"] {
+    max-width: 200px;
+    height: 10px;
+    -webkit-appearance: none;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.music-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.upload-container label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #666;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-container input[type="file"] {
+    display: none;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+.music-controls button i {
+    font-size: 24px;
+}
+
+.music-controls button:hover i,
+.music-controls input:hover i {
+    color: #000;
+}
+
+.music-controls .prev-btn i {
+    transform: rotate(180deg);
+}
+
+.music-controls .pause-btn {
+    display: none;
+}
+
+.music-controls .vol-down-btn,
+.music-controls .vol-up-btn {
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.music-controls .vol-down-btn i,
+.music-controls .vol-up-btn i {
+    font-size: 24px;
+}
+
+.music-controls .vol-down-btn:hover i,
+.music-controls .vol-up-btn:hover i {
+    color: #000;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: blue;
+    width: 0;
+    margin: 5px 0;
+}
+
+.mainAudioContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: 300px;
+    margin: 20px 0;
+}
+
+.audoNameBox {
+    background-color: white;
+    height: 30px;
+}
+
+#audioName {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.audioInfoContainer {
+    overflow: hidden;
+}
+
+#my-video {
+    transform: scale(2);
+}
